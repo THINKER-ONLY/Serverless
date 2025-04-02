@@ -1,0 +1,419 @@
+[2025-04-02T08:25:51.697Z] [32m开始波动负载测试...[0m
+[2025-04-02T08:25:51.699Z] [34m测试时长: 3分钟[0m
+[2025-04-02T08:25:51.699Z] [34m波动周期: 30秒[0m
+[2025-04-02T08:25:51.699Z] [34m并发范围: 2 - 150[0m
+[2025-04-02T08:25:51.699Z] 
+[2025-04-02T08:25:54.699Z] [34m测试进度: 1.7% (3秒/180秒)[0m
+[2025-04-02T08:25:54.700Z] [32m当前并发数目标: 120, 活跃请求: 97[0m
+[2025-04-02T08:25:54.700Z] [36m总请求数: 5136, 成功率: 98.11%, 每秒请求: 1712.00[0m
+[2025-04-02T08:25:54.700Z] [33m函数统计:[0m
+[2025-04-02T08:25:54.701Z]   - hello: 请求=514, 成功率=97.08%, 平均响应时间=29.18ms
+[2025-04-02T08:25:54.701Z]   - echo: 请求=1038, 成功率=97.50%, 平均响应时间=28.70ms
+[2025-04-02T08:25:54.701Z]   - weather: 请求=1578, 成功率=98.61%, 平均响应时间=28.94ms
+[2025-04-02T08:25:54.701Z]   - calculate: 请求=2006, 成功率=98.31%, 平均响应时间=29.32ms
+[2025-04-02T08:25:54.701Z] 
+[2025-04-02T08:25:57.649Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.641Z"}[0m
+[2025-04-02T08:25:57.649Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.642Z"}[0m
+[2025-04-02T08:25:57.649Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:25:57.642Z"}[0m
+[2025-04-02T08:25:57.649Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:25:57.643Z"}[0m
+[2025-04-02T08:25:57.649Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:25:57.643Z"}[0m
+[2025-04-02T08:25:57.649Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.644Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.644Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.644Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.645Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.646Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.646Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.646Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:25:57.647Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.647Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.648Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.648Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:25:57.649Z"}[0m
+[2025-04-02T08:25:57.650Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.649Z"}[0m
+[2025-04-02T08:25:57.653Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:25:57.650Z"}[0m
+[2025-04-02T08:25:57.653Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:25:57.650Z"}[0m
+[2025-04-02T08:25:57.653Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.651Z"}[0m
+[2025-04-02T08:25:57.653Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:25:57.651Z"}[0m
+[2025-04-02T08:25:57.653Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.652Z"}[0m
+[2025-04-02T08:25:57.653Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:25:57.652Z"}[0m
+[2025-04-02T08:25:57.654Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.653Z"}[0m
+[2025-04-02T08:25:57.654Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.653Z"}[0m
+[2025-04-02T08:25:57.655Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.654Z"}[0m
+[2025-04-02T08:25:57.655Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.654Z"}[0m
+[2025-04-02T08:25:57.655Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:25:57.655Z","query":{}}[0m
+[2025-04-02T08:25:57.655Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:25:57.655Z"}[0m
+[2025-04-02T08:25:57.656Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:25:57.656Z"}[0m
+[2025-04-02T08:25:57.656Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:25:57.656Z"}[0m
+[2025-04-02T08:25:57.657Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.657Z"}[0m
+[2025-04-02T08:25:57.657Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.657Z"}[0m
+[2025-04-02T08:25:57.658Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:25:57.658Z"}[0m
+[2025-04-02T08:25:57.658Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:25:57.658Z"}[0m
+[2025-04-02T08:25:57.659Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.659Z"}[0m
+[2025-04-02T08:25:57.659Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:25:57.659Z"}[0m
+[2025-04-02T08:25:57.660Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.660Z"}[0m
+[2025-04-02T08:25:57.660Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.660Z"}[0m
+[2025-04-02T08:25:57.661Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.661Z"}[0m
+[2025-04-02T08:25:57.661Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:25:57.661Z"}[0m
+[2025-04-02T08:25:57.662Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:25:57.662Z"}[0m
+[2025-04-02T08:25:57.662Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.662Z"}[0m
+[2025-04-02T08:25:57.663Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.663Z"}[0m
+[2025-04-02T08:25:57.663Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.663Z"}[0m
+[2025-04-02T08:25:57.664Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:25:57.664Z"}[0m
+[2025-04-02T08:25:57.664Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.664Z"}[0m
+[2025-04-02T08:25:57.665Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.665Z"}[0m
+[2025-04-02T08:25:57.665Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:25:57.665Z"}[0m
+[2025-04-02T08:25:57.666Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:25:57.666Z"}[0m
+[2025-04-02T08:25:57.666Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:25:57.666Z"}[0m
+[2025-04-02T08:25:57.667Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:25:57.667Z"}[0m
+[2025-04-02T08:25:57.667Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:25:57.667Z"}[0m
+[2025-04-02T08:25:57.668Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:25:57.668Z"}[0m
+[2025-04-02T08:25:57.668Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.668Z"}[0m
+[2025-04-02T08:25:57.669Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.669Z"}[0m
+[2025-04-02T08:25:57.669Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.669Z"}[0m
+[2025-04-02T08:25:57.670Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.669Z"}[0m
+[2025-04-02T08:25:57.670Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:25:57.670Z"}[0m
+[2025-04-02T08:25:57.671Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:25:57.670Z"}[0m
+[2025-04-02T08:25:57.671Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.671Z"}[0m
+[2025-04-02T08:25:57.672Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.671Z"}[0m
+[2025-04-02T08:25:57.672Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:25:57.672Z"}[0m
+[2025-04-02T08:25:57.673Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:25:57.672Z"}[0m
+[2025-04-02T08:25:57.673Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=王五 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:25:57.673Z","query":{"name":"王五"}}[0m
+[2025-04-02T08:25:57.673Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:25:57.673Z"}[0m
+[2025-04-02T08:25:57.674Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:25:57.674Z"}[0m
+[2025-04-02T08:25:57.674Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.674Z"}[0m
+[2025-04-02T08:25:57.675Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:25:57.675Z"}[0m
+[2025-04-02T08:25:57.675Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.675Z"}[0m
+[2025-04-02T08:25:57.676Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.676Z"}[0m
+[2025-04-02T08:25:57.676Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.676Z"}[0m
+[2025-04-02T08:25:57.677Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:25:57.677Z"}[0m
+[2025-04-02T08:25:57.677Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.677Z"}[0m
+[2025-04-02T08:25:57.678Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.678Z"}[0m
+[2025-04-02T08:25:57.678Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.678Z"}[0m
+[2025-04-02T08:25:57.679Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:25:57.679Z","query":{}}[0m
+[2025-04-02T08:25:57.679Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.679Z"}[0m
+[2025-04-02T08:25:57.680Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.680Z"}[0m
+[2025-04-02T08:25:57.680Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:25:57.680Z"}[0m
+[2025-04-02T08:25:57.681Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.681Z"}[0m
+[2025-04-02T08:25:57.681Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.681Z"}[0m
+[2025-04-02T08:25:57.682Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.682Z"}[0m
+[2025-04-02T08:25:57.682Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:25:57.682Z"}[0m
+[2025-04-02T08:25:57.683Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.683Z"}[0m
+[2025-04-02T08:25:57.683Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:25:57.683Z"}[0m
+[2025-04-02T08:25:57.684Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:25:57.684Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:25:57.684Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:25:57.684Z"}[0m
+[2025-04-02T08:25:57.685Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.684Z"}[0m
+[2025-04-02T08:25:57.685Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:25:57.685Z"}[0m
+[2025-04-02T08:25:57.686Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.685Z"}[0m
+[2025-04-02T08:25:57.686Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:25:57.686Z"}[0m
+[2025-04-02T08:25:57.687Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:25:57.686Z"}[0m
+[2025-04-02T08:25:57.687Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:25:57.687Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:25:57.687Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=李四 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:25:57.687Z","query":{"name":"李四"}}[0m
+[2025-04-02T08:25:57.688Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.688Z"}[0m
+[2025-04-02T08:25:57.688Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:25:57.688Z"}[0m
+[2025-04-02T08:25:57.689Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.689Z"}[0m
+[2025-04-02T08:25:57.689Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:25:57.689Z"}[0m
+[2025-04-02T08:25:57.690Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:25:57.690Z"}[0m
+[2025-04-02T08:25:57.690Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.690Z"}[0m
+[2025-04-02T08:25:57.691Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:25:57.691Z"}[0m
+[2025-04-02T08:25:57.691Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:25:57.691Z"}[0m
+[2025-04-02T08:25:57.692Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:25:57.692Z"}[0m
+[2025-04-02T08:25:57.692Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:25:57.692Z"}[0m
+[2025-04-02T08:25:57.693Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:25:57.693Z"}[0m
+[2025-04-02T08:25:57.693Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:25:57.693Z"}[0m
+[2025-04-02T08:25:57.694Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:25:57.694Z"}[0m
+[2025-04-02T08:25:57.694Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:25:57.694Z"}[0m
+[2025-04-02T08:25:57.695Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:25:57.695Z"}[0m
+[2025-04-02T08:25:57.706Z] [34m测试进度: 3.3% (6秒/180秒)[0m
+[2025-04-02T08:25:57.706Z] [32m当前并发数目标: 146, 活跃请求: 136[0m
+[2025-04-02T08:25:57.706Z] [36m总请求数: 11311, 成功率: 98.80%, 每秒请求: 1882.97[0m
+[2025-04-02T08:25:57.706Z] [33m函数统计:[0m
+[2025-04-02T08:25:57.706Z]   - hello: 请求=1105, 成功率=99.19%, 平均响应时间=33.54ms
+[2025-04-02T08:25:57.706Z]   - echo: 请求=2338, 成功率=98.46%, 平均响应时间=33.40ms
+[2025-04-02T08:25:57.706Z]   - weather: 请求=3401, 成功率=98.79%, 平均响应时间=33.94ms
+[2025-04-02T08:25:57.706Z]   - calculate: 请求=4467, 成功率=98.88%, 平均响应时间=34.02ms
+[2025-04-02T08:25:57.706Z] 
+[2025-04-02T08:26:00.706Z] [34m测试进度: 5.0% (9秒/180秒)[0m
+[2025-04-02T08:26:00.706Z] [32m当前并发数目标: 2, 活跃请求: 105[0m
+[2025-04-02T08:26:00.706Z] [36m总请求数: 17086, 成功率: 99.39%, 每秒请求: 1896.97[0m
+[2025-04-02T08:26:00.706Z] [33m函数统计:[0m
+[2025-04-02T08:26:00.706Z]   - hello: 请求=1666, 成功率=98.92%, 平均响应时间=38.34ms
+[2025-04-02T08:26:00.706Z]   - echo: 请求=3456, 成功率=99.45%, 平均响应时间=38.31ms
+[2025-04-02T08:26:00.706Z]   - weather: 请求=5188, 成功率=99.34%, 平均响应时间=39.01ms
+[2025-04-02T08:26:00.707Z]   - calculate: 请求=6776, 成功率=99.50%, 平均响应时间=39.11ms
+[2025-04-02T08:26:00.707Z] 
+[2025-04-02T08:26:01.094Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:01.093Z"}[0m
+[2025-04-02T08:26:01.095Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:01.094Z"}[0m
+[2025-04-02T08:26:03.631Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:03.631Z"}[0m
+[2025-04-02T08:26:03.632Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:03.632Z"}[0m
+[2025-04-02T08:26:03.707Z] [34m测试进度: 6.7% (12秒/180秒)[0m
+[2025-04-02T08:26:03.707Z] [32m当前并发数目标: 119, 活跃请求: 0[0m
+[2025-04-02T08:26:03.707Z] [36m总请求数: 17202, 成功率: 100.00%, 每秒请求: 1432.54[0m
+[2025-04-02T08:26:03.707Z] [33m函数统计:[0m
+[2025-04-02T08:26:03.707Z]   - hello: 请求=1681, 成功率=100.00%, 平均响应时间=38.08ms
+[2025-04-02T08:26:03.707Z]   - echo: 请求=3479, 成功率=100.00%, 平均响应时间=38.13ms
+[2025-04-02T08:26:03.707Z]   - weather: 请求=5217, 成功率=100.00%, 平均响应时间=38.83ms
+[2025-04-02T08:26:03.708Z]   - calculate: 请求=6825, 成功率=100.00%, 平均响应时间=38.89ms
+[2025-04-02T08:26:03.708Z] 
+[2025-04-02T08:26:05.945Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.944Z"}[0m
+[2025-04-02T08:26:05.946Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:05.945Z"}[0m
+[2025-04-02T08:26:05.946Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:05.946Z"}[0m
+[2025-04-02T08:26:05.947Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:05.946Z"}[0m
+[2025-04-02T08:26:05.948Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:05.947Z"}[0m
+[2025-04-02T08:26:05.949Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:05.948Z"}[0m
+[2025-04-02T08:26:05.949Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:05.949Z"}[0m
+[2025-04-02T08:26:05.950Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:05.950Z"}[0m
+[2025-04-02T08:26:05.950Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:05.950Z"}[0m
+[2025-04-02T08:26:05.950Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:05.950Z"}[0m
+[2025-04-02T08:26:05.951Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.950Z"}[0m
+[2025-04-02T08:26:05.951Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:05.951Z"}[0m
+[2025-04-02T08:26:05.951Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:05.951Z"}[0m
+[2025-04-02T08:26:05.951Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:05.951Z"}[0m
+[2025-04-02T08:26:05.952Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.952Z"}[0m
+[2025-04-02T08:26:05.952Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.952Z"}[0m
+[2025-04-02T08:26:05.952Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.952Z"}[0m
+[2025-04-02T08:26:05.953Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:05.952Z"}[0m
+[2025-04-02T08:26:05.953Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.953Z"}[0m
+[2025-04-02T08:26:05.953Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:05.953Z"}[0m
+[2025-04-02T08:26:05.953Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:05.953Z"}[0m
+[2025-04-02T08:26:05.954Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.954Z"}[0m
+[2025-04-02T08:26:05.954Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.954Z"}[0m
+[2025-04-02T08:26:05.954Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=李四 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.954Z","query":{"name":"李四"}}[0m
+[2025-04-02T08:26:05.954Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:05.954Z"}[0m
+[2025-04-02T08:26:05.955Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.955Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:26:05.955Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.955Z"}[0m
+[2025-04-02T08:26:05.955Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:05.955Z"}[0m
+[2025-04-02T08:26:05.956Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:05.956Z"}[0m
+[2025-04-02T08:26:05.956Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.956Z"}[0m
+[2025-04-02T08:26:05.956Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:05.956Z"}[0m
+[2025-04-02T08:26:05.956Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:05.956Z"}[0m
+[2025-04-02T08:26:05.957Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:05.957Z"}[0m
+[2025-04-02T08:26:05.957Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:05.957Z"}[0m
+[2025-04-02T08:26:05.957Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.957Z"}[0m
+[2025-04-02T08:26:05.958Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:05.957Z"}[0m
+[2025-04-02T08:26:05.959Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:05.959Z"}[0m
+[2025-04-02T08:26:05.960Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.960Z"}[0m
+[2025-04-02T08:26:05.960Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=王五 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.960Z","query":{"name":"王五"}}[0m
+[2025-04-02T08:26:05.960Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.960Z"}[0m
+[2025-04-02T08:26:05.961Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.961Z"}[0m
+[2025-04-02T08:26:05.961Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.961Z"}[0m
+[2025-04-02T08:26:05.961Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.961Z"}[0m
+[2025-04-02T08:26:05.961Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:05.961Z"}[0m
+[2025-04-02T08:26:05.962Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.962Z"}[0m
+[2025-04-02T08:26:05.962Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:05.962Z"}[0m
+[2025-04-02T08:26:05.962Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:05.962Z"}[0m
+[2025-04-02T08:26:05.963Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.963Z"}[0m
+[2025-04-02T08:26:05.963Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:05.963Z"}[0m
+[2025-04-02T08:26:05.963Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:05.963Z"}[0m
+[2025-04-02T08:26:05.963Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.963Z"}[0m
+[2025-04-02T08:26:05.964Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.964Z"}[0m
+[2025-04-02T08:26:05.964Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=王五 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.964Z","query":{"name":"王五"}}[0m
+[2025-04-02T08:26:05.964Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.964Z"}[0m
+[2025-04-02T08:26:05.965Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:05.965Z"}[0m
+[2025-04-02T08:26:05.965Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.965Z"}[0m
+[2025-04-02T08:26:05.965Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.965Z"}[0m
+[2025-04-02T08:26:05.965Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.965Z"}[0m
+[2025-04-02T08:26:05.966Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:05.966Z"}[0m
+[2025-04-02T08:26:05.966Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=李四 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.966Z","query":{"name":"李四"}}[0m
+[2025-04-02T08:26:05.966Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.966Z"}[0m
+[2025-04-02T08:26:05.967Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:05.967Z"}[0m
+[2025-04-02T08:26:05.967Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.967Z"}[0m
+[2025-04-02T08:26:05.968Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:05.968Z"}[0m
+[2025-04-02T08:26:05.969Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.969Z"}[0m
+[2025-04-02T08:26:05.969Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:05.969Z"}[0m
+[2025-04-02T08:26:05.970Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:05.970Z"}[0m
+[2025-04-02T08:26:05.970Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:05.970Z"}[0m
+[2025-04-02T08:26:05.970Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:05.970Z"}[0m
+[2025-04-02T08:26:05.970Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:05.970Z"}[0m
+[2025-04-02T08:26:05.971Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:05.971Z"}[0m
+[2025-04-02T08:26:05.971Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.971Z"}[0m
+[2025-04-02T08:26:05.971Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:05.971Z"}[0m
+[2025-04-02T08:26:05.972Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.972Z"}[0m
+[2025-04-02T08:26:05.972Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.972Z"}[0m
+[2025-04-02T08:26:05.972Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:05.972Z"}[0m
+[2025-04-02T08:26:05.972Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.972Z","query":{}}[0m
+[2025-04-02T08:26:05.973Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.973Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:26:05.973Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:05.973Z"}[0m
+[2025-04-02T08:26:05.973Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=王五 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.973Z","query":{"name":"王五"}}[0m
+[2025-04-02T08:26:05.974Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:05.974Z"}[0m
+[2025-04-02T08:26:05.974Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:05.974Z"}[0m
+[2025-04-02T08:26:05.974Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:05.974Z"}[0m
+[2025-04-02T08:26:05.975Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.974Z"}[0m
+[2025-04-02T08:26:05.975Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:05.975Z"}[0m
+[2025-04-02T08:26:05.975Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=王五 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:05.975Z","query":{"name":"王五"}}[0m
+[2025-04-02T08:26:05.975Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:05.975Z"}[0m
+[2025-04-02T08:26:05.976Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:05.976Z"}[0m
+[2025-04-02T08:26:06.707Z] [34m测试进度: 8.3% (15秒/180秒)[0m
+[2025-04-02T08:26:06.707Z] [32m当前并发数目标: 76, 活跃请求: 39[0m
+[2025-04-02T08:26:06.707Z] [36m总请求数: 22541, 成功率: 99.83%, 每秒请求: 1501.93[0m
+[2025-04-02T08:26:06.707Z] [33m函数统计:[0m
+[2025-04-02T08:26:06.707Z]   - hello: 请求=2221, 成功率=99.82%, 平均响应时间=34.76ms
+[2025-04-02T08:26:06.707Z]   - echo: 请求=4538, 成功率=99.85%, 平均响应时间=35.07ms
+[2025-04-02T08:26:06.707Z]   - weather: 请求=6815, 成功率=99.79%, 平均响应时间=35.61ms
+[2025-04-02T08:26:06.707Z]   - calculate: 请求=8967, 成功率=99.84%, 平均响应时间=35.49ms
+[2025-04-02T08:26:06.707Z] 
+[2025-04-02T08:26:09.707Z] [34m测试进度: 10.0% (18秒/180秒)[0m
+[2025-04-02T08:26:09.708Z] [32m当前并发数目标: 32, 活跃请求: 0[0m
+[2025-04-02T08:26:09.708Z] [36m总请求数: 25524, 成功率: 100.00%, 每秒请求: 1417.37[0m
+[2025-04-02T08:26:09.708Z] [33m函数统计:[0m
+[2025-04-02T08:26:09.708Z]   - hello: 请求=2510, 成功率=100.00%, 平均响应时间=32.54ms
+[2025-04-02T08:26:09.708Z]   - echo: 请求=5148, 成功率=100.00%, 平均响应时间=32.70ms
+[2025-04-02T08:26:09.708Z]   - weather: 请求=7706, 成功率=100.00%, 平均响应时间=33.27ms
+[2025-04-02T08:26:09.708Z]   - calculate: 请求=10160, 成功率=100.00%, 平均响应时间=33.13ms
+[2025-04-02T08:26:09.708Z] 
+[2025-04-02T08:26:12.722Z] [34m测试进度: 11.7% (21秒/180秒)[0m
+[2025-04-02T08:26:12.722Z] [32m当前并发数目标: 150, 活跃请求: 150[0m
+[2025-04-02T08:26:12.722Z] [36m总请求数: 26649, 成功率: 99.44%, 每秒请求: 1267.61[0m
+[2025-04-02T08:26:12.722Z] [33m函数统计:[0m
+[2025-04-02T08:26:12.722Z]   - hello: 请求=2616, 成功率=99.43%, 平均响应时间=31.71ms
+[2025-04-02T08:26:12.723Z]   - echo: 请求=5381, 成功率=99.59%, 平均响应时间=31.79ms
+[2025-04-02T08:26:12.723Z]   - weather: 请求=8051, 成功率=99.34%, 平均响应时间=32.39ms
+[2025-04-02T08:26:12.723Z]   - calculate: 请求=10601, 成功率=99.43%, 平均响应时间=32.26ms
+[2025-04-02T08:26:12.723Z] 
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.429Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.430Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.430Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.431Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:13.431Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:13.432Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:13.432Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.433Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.433Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:13.434Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:13.434Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:13.435Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:13.435Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:13.436Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.436Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:13.437Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:13.437Z"}[0m
+[2025-04-02T08:26:13.438Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:13.438Z"}[0m
+[2025-04-02T08:26:13.440Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.438Z"}[0m
+[2025-04-02T08:26:13.441Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=王五 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.438Z","query":{"name":"王五"}}[0m
+[2025-04-02T08:26:13.441Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.439Z"}[0m
+[2025-04-02T08:26:13.441Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.439Z"}[0m
+[2025-04-02T08:26:13.441Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:13.440Z"}[0m
+[2025-04-02T08:26:13.441Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.440Z"}[0m
+[2025-04-02T08:26:13.442Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.441Z"}[0m
+[2025-04-02T08:26:13.442Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:13.441Z"}[0m
+[2025-04-02T08:26:13.443Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:13.442Z"}[0m
+[2025-04-02T08:26:13.443Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:13.442Z"}[0m
+[2025-04-02T08:26:13.443Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.443Z"}[0m
+[2025-04-02T08:26:13.443Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.443Z"}[0m
+[2025-04-02T08:26:13.444Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.444Z"}[0m
+[2025-04-02T08:26:13.444Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.444Z"}[0m
+[2025-04-02T08:26:13.445Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.445Z"}[0m
+[2025-04-02T08:26:13.445Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:13.445Z"}[0m
+[2025-04-02T08:26:13.446Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:13.446Z"}[0m
+[2025-04-02T08:26:13.446Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.446Z"}[0m
+[2025-04-02T08:26:13.447Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:13.447Z"}[0m
+[2025-04-02T08:26:13.447Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:13.447Z"}[0m
+[2025-04-02T08:26:13.448Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.448Z"}[0m
+[2025-04-02T08:26:13.448Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.448Z"}[0m
+[2025-04-02T08:26:13.449Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.449Z"}[0m
+[2025-04-02T08:26:13.449Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.449Z"}[0m
+[2025-04-02T08:26:13.450Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.450Z"}[0m
+[2025-04-02T08:26:13.450Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.450Z"}[0m
+[2025-04-02T08:26:13.451Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.451Z"}[0m
+[2025-04-02T08:26:13.452Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.451Z"}[0m
+[2025-04-02T08:26:13.452Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.452Z"}[0m
+[2025-04-02T08:26:13.453Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.452Z"}[0m
+[2025-04-02T08:26:13.453Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.453Z"}[0m
+[2025-04-02T08:26:13.454Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:13.453Z"}[0m
+[2025-04-02T08:26:13.454Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.454Z"}[0m
+[2025-04-02T08:26:13.455Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:13.454Z"}[0m
+[2025-04-02T08:26:13.455Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.455Z"}[0m
+[2025-04-02T08:26:13.455Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:13.455Z"}[0m
+[2025-04-02T08:26:13.456Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.456Z"}[0m
+[2025-04-02T08:26:13.456Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:13.456Z"}[0m
+[2025-04-02T08:26:13.457Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.457Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:26:13.457Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:13.457Z"}[0m
+[2025-04-02T08:26:13.458Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=李四 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.458Z","query":{"name":"李四"}}[0m
+[2025-04-02T08:26:13.458Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:13.458Z"}[0m
+[2025-04-02T08:26:13.459Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.458Z","query":{}}[0m
+[2025-04-02T08:26:13.459Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:13.459Z"}[0m
+[2025-04-02T08:26:13.460Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:13.459Z"}[0m
+[2025-04-02T08:26:13.460Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.460Z"}[0m
+[2025-04-02T08:26:13.461Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.460Z","query":{}}[0m
+[2025-04-02T08:26:13.461Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.461Z"}[0m
+[2025-04-02T08:26:13.462Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:13.461Z"}[0m
+[2025-04-02T08:26:13.462Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.462Z"}[0m
+[2025-04-02T08:26:13.463Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:13.462Z"}[0m
+[2025-04-02T08:26:13.463Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.463Z"}[0m
+[2025-04-02T08:26:13.464Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.464Z"}[0m
+[2025-04-02T08:26:13.464Z] [35m调试: 请求响应数据 http://localhost:3000/weather/ -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:13.464Z"}[0m
+[2025-04-02T08:26:13.465Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.465Z"}[0m
+[2025-04-02T08:26:13.465Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.465Z","query":{}}[0m
+[2025-04-02T08:26:13.466Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:13.466Z"}[0m
+[2025-04-02T08:26:13.466Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.466Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:26:13.467Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E4%B8%8A%E6%B5%B7 -> {"success":true,"city":"上海","temperature":"22°C","condition":"多云","timestamp":"2025-04-02T08:26:13.466Z"}[0m
+[2025-04-02T08:26:13.467Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:13.467Z"}[0m
+[2025-04-02T08:26:13.468Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.467Z"}[0m
+[2025-04-02T08:26:13.468Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%B7%B1%E5%9C%B3 -> {"success":true,"city":"深圳","temperature":"26°C","condition":"阴","timestamp":"2025-04-02T08:26:13.468Z"}[0m
+[2025-04-02T08:26:13.468Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:13.468Z"}[0m
+[2025-04-02T08:26:13.470Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.470Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:26:13.470Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%B9%BF%E5%B7%9E -> {"success":true,"city":"广州","temperature":"28°C","condition":"小雨","timestamp":"2025-04-02T08:26:13.470Z"}[0m
+[2025-04-02T08:26:13.471Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.471Z"}[0m
+[2025-04-02T08:26:13.471Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.471Z"}[0m
+[2025-04-02T08:26:13.472Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.472Z"}[0m
+[2025-04-02T08:26:13.472Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.472Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:26:13.473Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.473Z"}[0m
+[2025-04-02T08:26:13.473Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.473Z"}[0m
+[2025-04-02T08:26:13.474Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.474Z"}[0m
+[2025-04-02T08:26:13.475Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.474Z"}[0m
+[2025-04-02T08:26:13.475Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=张三 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.475Z","query":{"name":"张三"}}[0m
+[2025-04-02T08:26:13.475Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=王五 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.475Z","query":{"name":"王五"}}[0m
+[2025-04-02T08:26:13.476Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"这是一个测试","timestamp":"2025-04-02T08:26:13.476Z"}[0m
+[2025-04-02T08:26:13.476Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.476Z"}[0m
+[2025-04-02T08:26:13.477Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.477Z"}[0m
+[2025-04-02T08:26:13.478Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:13.477Z"}[0m
+[2025-04-02T08:26:13.478Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=multiply -> {"success":true,"operation":"乘法","a":10,"b":5,"result":50,"timestamp":"2025-04-02T08:26:13.478Z"}[0m
+[2025-04-02T08:26:13.478Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.478Z"}[0m
+[2025-04-02T08:26:13.479Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.479Z"}[0m
+[2025-04-02T08:26:13.480Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.479Z"}[0m
+[2025-04-02T08:26:13.480Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.480Z"}[0m
+[2025-04-02T08:26:13.481Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.480Z"}[0m
+[2025-04-02T08:26:13.481Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.481Z"}[0m
+[2025-04-02T08:26:13.481Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:13.481Z"}[0m
+[2025-04-02T08:26:13.482Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:13.482Z"}[0m
+[2025-04-02T08:26:13.482Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.482Z"}[0m
+[2025-04-02T08:26:13.483Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=李四 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.483Z","query":{"name":"李四"}}[0m
+[2025-04-02T08:26:15.722Z] [34m测试进度: 13.3% (24秒/180秒)[0m
+[2025-04-02T08:26:15.722Z] [32m当前并发数目标: 6, 活跃请求: 35[0m
+[2025-04-02T08:26:15.722Z] [36m总请求数: 32475, 成功率: 99.89%, 每秒请求: 1351.83[0m
+[2025-04-02T08:26:15.722Z] [33m函数统计:[0m
+[2025-04-02T08:26:15.722Z]   - hello: 请求=3231, 成功率=99.94%, 平均响应时间=34.73ms
+[2025-04-02T08:26:15.722Z]   - echo: 请求=6554, 成功率=99.88%, 平均响应时间=34.56ms
+[2025-04-02T08:26:15.722Z]   - weather: 请求=9809, 成功率=99.93%, 平均响应时间=34.96ms
+[2025-04-02T08:26:15.722Z]   - calculate: 请求=12881, 成功率=99.86%, 平均响应时间=34.97ms
+[2025-04-02T08:26:15.722Z] 
+[2025-04-02T08:26:15.922Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:15.922Z"}[0m
+[2025-04-02T08:26:15.922Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:15.922Z"}[0m
+[2025-04-02T08:26:15.923Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:15.922Z"}[0m
+[2025-04-02T08:26:15.923Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:15.923Z"}[0m
+[2025-04-02T08:26:15.923Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:15.923Z"}[0m
+[2025-04-02T08:26:15.924Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:15.924Z"}[0m
+[2025-04-02T08:26:15.924Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:15.924Z","query":{}}[0m
+�","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.479Z"}[0m
+[2025-04-02T08:26:13.480Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E8%87%AA%E5%8A%A8%E6%89%A9%E5%B1%95%E8%83%BD%E5%8A%9B -> {"success":true,"text":"自动扩展能力","timestamp":"2025-04-02T08:26:13.480Z"}[0m
+[2025-04-02T08:26:13.481Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:13.480Z"}[0m
+[2025-04-02T08:26:13.481Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E6%9D%AD%E5%B7%9E -> {"success":true,"city":"杭州","temperature":"21°C","condition":"晴","timestamp":"2025-04-02T08:26:13.481Z"}[0m
+[2025-04-02T08:26:13.481Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:13.481Z"}[0m
+[2025-04-02T08:26:13.482Z] [35m调试: 请求响应数据 http://localhost:3000/weather/?city=%E5%8C%97%E4%BA%AC -> {"success":true,"city":"北京","temperature":"20°C","condition":"晴","timestamp":"2025-04-02T08:26:13.482Z"}[0m
+[2025-04-02T08:26:13.482Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:13.482Z"}[0m
+[2025-04-02T08:26:13.483Z] [35m调试: 请求响应数据 http://localhost:3000/hello/?name=李四 -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:13.483Z","query":{"name":"李四"}}[0m
+[2025-04-02T08:26:15.722Z] [34m测试进度: 13.3% (24秒/180秒)[0m
+[2025-04-02T08:26:15.722Z] [32m当前并发数目标: 6, 活跃请求: 35[0m
+[2025-04-02T08:26:15.722Z] [36m总请求数: 32475, 成功率: 99.89%, 每秒请求: 1351.83[0m
+[2025-04-02T08:26:15.722Z] [33m函数统计:[0m
+[2025-04-02T08:26:15.722Z]   - hello: 请求=3231, 成功率=99.94%, 平均响应时间=34.73ms
+[2025-04-02T08:26:15.722Z]   - echo: 请求=6554, 成功率=99.88%, 平均响应时间=34.56ms
+[2025-04-02T08:26:15.722Z]   - weather: 请求=9809, 成功率=99.93%, 平均响应时间=34.96ms
+[2025-04-02T08:26:15.722Z]   - calculate: 请求=12881, 成功率=99.86%, 平均响应时间=34.97ms
+[2025-04-02T08:26:15.722Z] 
+[2025-04-02T08:26:15.922Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=%E5%BC%B9%E6%80%A7%E6%89%A9%E7%BC%A9%E5%AE%B9%E6%B5%8B%E8%AF%95 -> {"success":true,"text":"弹性扩缩容测试","timestamp":"2025-04-02T08:26:15.922Z"}[0m
+[2025-04-02T08:26:15.922Z] [35m调试: 请求响应数据 http://localhost:3000/echo/?text=你好世界 -> {"success":true,"text":"你好世界","timestamp":"2025-04-02T08:26:15.922Z"}[0m
+[2025-04-02T08:26:15.923Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=add -> {"success":true,"operation":"加法","a":10,"b":5,"result":15,"timestamp":"2025-04-02T08:26:15.922Z"}[0m
+[2025-04-02T08:26:15.923Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=divide -> {"success":true,"operation":"除法","a":10,"b":5,"result":2,"timestamp":"2025-04-02T08:26:15.923Z"}[0m
+[2025-04-02T08:26:15.923Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:15.923Z"}[0m
+[2025-04-02T08:26:15.924Z] [35m调试: 请求响应数据 http://localhost:3000/calculate/?a=10&b=5&op=subtract -> {"success":true,"operation":"减法","a":10,"b":5,"result":5,"timestamp":"2025-04-02T08:26:15.924Z"}[0m
+[2025-04-02T08:26:15.924Z] [35m调试: 请求响应数据 http://localhost:3000/hello/ -> {"success":true,"message":"你好，世界！","timestamp":"2025-04-02T08:26:15.924Z","query":{}}[0m

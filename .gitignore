@@ -36,8 +36,10 @@ yarn-error.log
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# Logs (保留重要的日志文件)
+logs/*.log
+!logs/elasticity-report.txt
+!logs/wave-loadtest.log
 
 # Environment variables
 .env
