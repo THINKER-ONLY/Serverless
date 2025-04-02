@@ -1,0 +1,32 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: data-processor
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        # 自动扩缩配置
+        autoscaling.knative.dev/minScale: "1"
+        autoscaling.knative.dev/maxScale: "10"
+        # 基于CPU使用率的自动扩缩
+        autoscaling.knative.dev/metric: "cpu"
+        autoscaling.knative.dev/target: "70"  # CPU 使用率超过70%时扩展
+        # 快速扩缩配置
+        autoscaling.knative.dev/window: "10s" # 检查窗口大小
+    spec:
+      containers:
+        - image: ${REGISTRY_URL}/data-processor:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PROCESSING_TIME
+              value: "200"  # 200ms的处理延迟
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 256Mi
+            requests:
+              cpu: 400m
+              memory: 128Mi 

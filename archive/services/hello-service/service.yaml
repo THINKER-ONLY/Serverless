@@ -1,0 +1,29 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hello-service
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        # 自动扩缩配置
+        autoscaling.knative.dev/minScale: "1"  # 最小实例数
+        autoscaling.knative.dev/maxScale: "10"  # 最大实例数
+        # 基于并发请求数的自动扩缩
+        autoscaling.knative.dev/target: "10"    # 每个实例处理10个并发请求
+    spec:
+      containers:
+        - image: ${REGISTRY_URL}/hello-service:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DELAY_MS
+              value: "50"  # 模拟处理延迟，可用于测试
+          resources:
+            limits:
+              cpu: 500m
+              memory: 128Mi
+            requests:
+              cpu: 200m
+              memory: 64Mi 
